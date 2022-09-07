@@ -31,11 +31,23 @@
     }
   ],
   "subPackages": [{
-    "root": "subpack",
-    "pages": [{
-      "path": "goods_details/goods_details"
-    }]
-  }],
+      "root": "subpack",
+      "pages": [{
+        "path": "goods_details/goods_details"
+      }]
+    },
+    {
+      "root": "subpack",
+      "pages": [{
+        "path": "goods_list/goods_list",
+        "style": {
+          "enablePullDownRefresh": true,
+          "onReachBottomDistance": 100,
+          "backgroundColor": "#eee"
+        }
+      }]
+    }
+  ],
   "tabBar": {
     "selectedColor": "#c00000",
     "list": [{
@@ -68,7 +80,11 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "黑马优购",
     "navigationBarBackgroundColor": "#c00000",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "usingComponents": {
+      "van-card": "/wxcomponents/vant/card/index"
+    },
+    "ignoreDevUnusedFiles": false
   },
   "uniIdRouter": {}
 }
